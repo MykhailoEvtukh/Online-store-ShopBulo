@@ -1,0 +1,59 @@
+.pnotifyContainer {
+  position: fixed;
+  z-index: 9999999999;
+  top: 10%;
+  right: 15%;
+  color: #012831d2;
+  border-radius: 5px;
+  text-align: center;
+  animation: pop 0.3s linear 1;
+}
+.red {
+  background-color: rgba(255, 99, 71, 0.816);
+}
+.green {
+  background-color: rgba(117, 255, 71, 0.795);
+}
+
+.closePnotify {
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  width: 30px;
+  border: none;
+  font-size: large;
+  vertical-align: middle;
+}
+
+.fade {
+  animation: pop 0.3s linear 1;
+  display: none;
+}
+
+.pnotifyContext {
+  padding: 10px 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pnotifyTitle,
+.pnotifyText {
+  text-align: center;
+}
+
+#pulse:hover {
+  animation: pulse 0.5s ease-in infinite;
+}
+#push:hover {
+  animation: pulse 0.3s linear 1;
+}
+#pop:hover {
+  animation: pop 0.3s linear 1;
+}
+
+@keyframes pop {
+  50% {
+    transform: scale(1.2);
+  }
+}

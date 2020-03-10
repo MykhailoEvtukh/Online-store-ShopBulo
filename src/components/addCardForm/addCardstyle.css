@@ -1,0 +1,562 @@
+@media (min-width: 320px) {
+  .create-ad {
+    content: '+';
+    position: fixed;
+    bottom: 20px;
+    right: 45px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    transform: translateX(50%);
+    z-index: 9999;
+    -webkit-box-shadow: -1px 0px 22px -4px rgba(74,130,111,1);
+    -moz-box-shadow: -1px 0px 22px -4px rgba(74,130,111,1);
+    box-shadow: -1px 0px 22px -4px rgba(74,130,111,1);
+  }
+
+
+
+  .create-ad::after {
+    content: '+';
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .modalBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100%;
+    z-index: 1000001;
+  }
+
+  .formWrapper {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 20px;
+  }
+
+  .formAdd {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+  }
+
+  .form.is-closed {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .closeForm {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    outline: none;
+  }
+
+  .formTitle {
+    margin-bottom: 25px;
+    padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .iw {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .formGroup {
+    display: flex;
+    width: 250;
+  }
+
+  .imageArr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 250px;
+    height: 130px;
+  }
+
+  .secondInput__Wrapper {
+    justify-content: space-between;
+  }
+
+  .secondInput--title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .secondLabel {
+    position: relative;
+    width: 250px;
+  }
+
+  .cardImg {
+    display: block;
+    width: 75px;
+    height: 60px;
+    background-color: rgb(236, 236, 236);
+    border-style: none;
+    transition: 0.3s ease-in-out;
+    opacity: 0.7;
+  }
+
+  .cardImg:first-child {
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(./icon/add_photo_icon_75x60_preview.png);
+    background-position: center;
+  }
+
+  .fileInput {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+  }
+
+  input {
+    width: 250px;
+    height: 50px;
+    border: solid 1px #e6e6e6;
+    padding: 0 0 0 4px;
+  }
+
+  .categorySelect {
+    width: 250px;
+    height: 50px;
+    border: solid 1px #e6e6e6;
+    opacity: 0.6;
+  }
+
+  .category--option {
+    color: #c5c5c5;
+  }
+
+  .addButton {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    border: none;
+    background-color: rgb(255, 107, 8);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    align-self: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .create-ad {
+    position: unset;
+    border-radius: 0px;
+    display: block;
+    border: none;
+    background-color: #ff6b08;
+    width: 185px;
+    height: 70px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    transform: translateX(0%);
+  }
+
+  .create-ad::after {
+    content: 'СТВОРИТИ ОГОЛОШЕННЯ';
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .modalForm {
+    position: relative;
+  }
+
+  .modalBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100%;
+    z-index: 1000001;
+  }
+
+  .formWrapper {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 720px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 40px;
+  }
+
+  .formAdd {
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+  }
+
+  .form.is-closed {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .closeForm {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    outline: none;
+  }
+
+  .formTitle {
+    margin-bottom: 36px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .iw {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .formGroup {
+    display: flex;
+    width: 468px;
+  }
+
+  .imageArr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 468px;
+    height: auto;
+  }
+
+  .secondInput__Wrapper {
+    justify-content: space-between;
+  }
+
+  .secondInput--title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .secondLabel {
+    position: relative;
+    width: 460px;
+  }
+
+  .cardImg {
+    border: 1px rgb(255, 107, 8);
+    border-style: dotted;
+    display: block;
+    width: 70px;
+    height: 55px;
+    background-color: rgb(236, 236, 236);
+    border-style: none;
+    transition: 0.3s ease-in-out;
+  }
+
+  .cardImg:first-child {
+    background-image: url(./icon/add_photo_icon_75x60_preview.png);
+    background-position: center;
+  }
+
+  .cardImg:first-child:hover {
+    background-image: url(./icon/add_photo_icon_75x60_white.png);
+  }
+
+  .cardImg:hover {
+    background-position: center;
+    background-color: rgb(255, 107, 8);
+    transform: scale(1.1);
+  }
+
+  .fileInput {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+  }
+
+  input {
+    width: 466px;
+    height: 60px;
+    border: solid 1px #e6e6e6;
+  }
+
+  .categorySelect {
+    width: 466px;
+    height: 60px;
+    border: solid 1px #e6e6e6;
+    opacity: 1;
+  }
+
+  .addButton {
+    display: block;
+    margin-top: 35px;
+    text-align: center;
+    width: 294px;
+    height: 60px;
+    border: none;
+    background-color: rgb(255, 107, 8);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    align-self: center;
+  }
+
+  .addButton:hover {
+    background-color: rgb(231, 94, 2);
+  }
+}
+
+@media (min-width: 1280px) {
+  .create-ad {
+    position: static;
+    top: 0;
+    right: 0;
+    border-radius: 0px;
+    display: block;
+    border: none;
+    background-color: #ff6b08;
+    width: 220px;
+    height: 70px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .create-ad::after {
+    content: 'СТВОРИТИ ОГОЛОШЕННЯ';
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  .modalForm {
+    position: relative;
+  }
+
+  .modalBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    pointer-events: initial;
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100%;
+    z-index: 1000001;
+  }
+
+  .formWrapper {
+    background-color: rgb(255, 255, 255);
+    width: 920px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .formAdd {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .form.is-closed {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .closeForm {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    outline: none;
+  }
+
+  .formTitle {
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .iw {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* Photo label */
+
+  .formGroup {
+    display: flex;
+    width: auto;
+  }
+
+  .imageArr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+    height: auto;
+  }
+
+  .secondInput__Wrapper {
+    justify-content: space-between;
+  }
+
+  .secondInput--title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .secondLabel {
+    position: relative;
+    width: 600px;
+    cursor: pointer;
+  }
+
+  .cardImg {
+    border: 1px rgb(255, 107, 8);
+    border-style: dotted;
+    display: block;
+    width: 75px;
+    height: 60px;
+    background-color: rgb(236, 236, 236);
+    border-style: none;
+    transition: 0.3s ease-in-out;
+  }
+
+  .cardImg:first-child {
+    background-image: url(./icon/add_photo_icon_75x60_preview.png);
+    background-position: center;
+  }
+
+  .cardImg:first-child:hover {
+    background-image: url(./icon/add_photo_icon_75x60_white.png);
+  }
+
+  .cardImg:hover {
+    background-position: center;
+    background-color: rgb(255, 107, 8);
+    transform: scale(1.1);
+  }
+
+  .fileInput {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+  }
+
+  input {
+    width: 600px;
+    height: 60px;
+    border: solid 1px #e6e6e6;
+  }
+
+  .categorySelect {
+    width: 600px;
+    height: 60px;
+    border: solid 1px #e6e6e6;
+    opacity: 1;
+  }
+
+  .addButton {
+    margin-top: 35px;
+    /* margin-right: 106px; */
+    text-align: center;
+    width: 294px;
+    height: 60px;
+    border: none;
+    background-color: rgb(255, 107, 8);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+  .addButton:hover {
+    background-color: rgb(231, 94, 2);
+  }
+}

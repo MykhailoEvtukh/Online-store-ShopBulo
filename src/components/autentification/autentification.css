@@ -1,0 +1,195 @@
+.form {
+  /* margin: 0 auto; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 54%;
+}
+
+.input-field-wrapper {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-field {
+  margin: 0;
+  padding: 0;
+  width: 88%;
+  height: 50px;
+  margin-bottom: 28px;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.input-field:invalid {
+  outline: solid 1px red;
+}
+
+.input-field:valid {
+  outline: solid 1px rgb(38, 235, 38);
+}
+
+.input-field:focus {
+  outline: solid 1px rgb(131, 131, 236);
+}
+
+.form-btns-wrapper {
+  width: 83%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form__text {
+  width: 90%;
+  text-align: center;
+}
+
+.form__btn {
+  width: 44%;
+  height: 70px;
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #ff6b08;
+  cursor: pointer;
+  color: #000;
+}
+
+.btn--register {
+  background-color: rgb(255, 255, 255);
+  border: solid 1px grey;
+}
+
+button.logout::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url('../../img/logout.svg');
+  top: 25px;
+  right: 32px;
+  transform: translateY(-50%);
+}
+
+.btn--google {
+  background-color: rgb(255, 255, 255);
+  border: solid 1px grey;
+  width: 30%;
+  background-image: url('../../img/searchGoogle.svg');
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: left 10% center;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* LIGHTBOX */
+.lightboxRegistration {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 90vw;
+  height: 90vh;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms linear;
+}
+
+.lightboxRegistration.isOpened {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightboxContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.9);
+  transition: transform 200ms ease-in-out;
+}
+
+.form {
+  background-color: rgb(249, 249, 250);
+  width: 810px;
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.lightboxRegistration.isOpened .lightboxContent {
+  transform: scale(1);
+}
+
+.lightboxButton {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+  outline: none;
+}
+
+.lightboxButton:hover,
+.lightboxButton:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lightboxButton i {
+  font-size: 36px;
+}
+
+[ui-pnotify].ui-pnotify.stack-bar-top {
+  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+  .form__btn {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 800px) {
+  .lightboxButton {
+    color: #fff;
+    background-color: black;
+    right: 60px;
+  }
+}

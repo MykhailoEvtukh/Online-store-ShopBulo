@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>JS project</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+  <style type="text/css">
+    #hellopreloader>p {
+      display: none;
+    }
+
+    #hellopreloader_preload {
+      display: block;
+      position: fixed;
+      z-index: 99999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #F9690E url(http://hello-site.ru//main/images/preloads/oval.svg) center center no-repeat;
+      background-size: 60px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="hamburger">
+      <button class="modal-menu">&#9776;</button>
+    </div>
+    
+    <div class="menu-wrapper-none" id="modalka">
+        <div class="overlay-wrapper-menu">
+      <button class="close">&#10005;</button>
+      <nav class="navigation conteiner">
+        <ul class="navigation__menu_list">
+          <li class="navigation__menu_list-item">
+            <p href="" class="navigation__menu_list-item-link">
+              <p class="loginOnMobile">Реєстрація / Увійти</p>
+            </p>
+            <button class="logout"></button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+    <div class="search-wrapper">
+      <form class="from">
+        <button type="submit" class="search">
+          <i class="material-icons">
+            search
+          </i>
+        </button>
+        <input type="search" class="search-input" />
+      </form>
+    </div>
+    <div class="logo-wrapper">
+      <a href="#" class="logoReload">Ш<span>О</span>ПБУЛО</a>
+    </div>
+    <div class="lightbox js-lightbox">
+      <div class="lightbox__overlay"></div>
+
+      <div class="lightbox__content">
+        <div class="lightbox__wrapper ads-wrapper">
+          <div class="title-wrapper-ads">
+            <p class="lightbox__title lightbox__title-ads">Мої оголошення</p>
+          </div>
+          <ul class="ads_acc"></ul>
+        </div>
+
+        <div class="lightbox__wrapper fav-wrapper">
+          <div class="title-wrapper-fav">
+            <p class="lightbox__title lightbox__title-fav">
+              Обрані оголошення
+            </p>
+          </div>
+          <ul class="favorites_acc"></ul>
+        </div>
+      </div>
+
+      <button type="button" class="lightbox__button" data-action="close-lightbox">
+        <i class="material-icons">close</i>
+      </button>
+    </div>
+    <div class="account_btn-wrapper">
+      <p class="account_btn-name">Your name</p>
+      <button class="account_btn">I</button>
+    </div>
+    <div class="popup">
+      <div class="popup-enter">
+        <p class="popup-enter-text">Мій кабінет</p>
+      </div>
+      <div class="popup-exit">
+        <p class="popup-exit-text">Вийти</p>
+      </div>
+    </div>
+    <div class="wrapewrap">
+      <div class="headers-btns-wrapper"><button class="login-register">реєстрація/увійти</button>
+      </div>
+      <button class="create-ad"></button>
+    </div>
+    <section class="registration lightboxRegistration">
+      <div class="lightboxOverlay"></div>
+      <div class="registrate-form lightboxContent">
+        <form class="form">
+          <!-- <p>Ви можете авторизуватися за допомогою Google Account:</p> -->
+          <!-- <button class="form__btn btn--google">Google</button> -->
+          <p>
+            Увійдіть за допомогою і-мейлу й пароля, або
+            зареєструйтесь:
+          </p>
+          <div class="input-field-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="E-mail" required />
+            <input type="password" class="input-field" name="password" placeholder="Password" required minlength="6" />
+            <input type="text" class="input-field hidden" name="name" placeholder="Name" minlength="3" />
+          </div>
+
+          <div class="form-btns-wrapper">
+            <button class="form__btn btn--login" data-action="login">
+              увійти
+            </button>
+            <button type="button" name="register" class="form__btn btn--register" data-action="register">
+              зареєструватися
+            </button>
+          </div>
+        </form>
+
+        <button type="button" class="lightboxButton" data-action="close-lightboxR">
+          <i class="material-icons">close</i>
+        </button>
+      </div>
+    </section>
+  </header>
+  <section class="modalForm"></section>
+  <section class="clear">
+    <div class="filter"></div>
+    <button class="clear-btn"><span>&#8634;</span> Очістити фільтри</button>
+  </section>
+  <main class="main">
+    <section class="main-section container">
+      <ul class="categories"></ul>
+      <div class="pagination">
+        <button type="button" class="loadMore" >більше</button>
+      </div>
+    </section>
+    <div class="pnotifyContainer fade" >
+   
+      <div class="pnotifyContext">
+      <h2 class="pnotifyTitle"></h2>
+      <p class="pnotifyText"></p>
+    </div >
+    <button class="closePnotify ">&#10005;</button>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&#169; 2019</p>
+      <p>All Right Reserved</p>
+      <p style="display: inherit;">
+        Developed with <span style="margin: 0px 5px; "> &#10084; </span> by
+        <a href="#" style="margin-left: 5px;">GoIT Students</a>
+      </p>
+    </div>
+  </footer>
+  <div class="modal-window" id="product-modal"></div>
+  <div id="hellopreloader">
+    <div id="hellopreloader_preload"></div>
+  </div>
+ 
+
+  <script type="text/javascript">
+    var hellopreloader = document.getElementById("hellopreloader_preload");
+
+    function fadeOutnojquery(el) {
+      el.style.opacity = 1;
+      var interhellopreloader = setInterval(function () {
+        el.style.opacity = el.style.opacity - 0.05;
+        if (el.style.opacity <= 0.05) {
+          clearInterval(interhellopreloader);
+          hellopreloader.style.display = "none";
+        }
+      }, 16);
+    }
+    window.onload = function () {
+      setTimeout(function () {
+        fadeOutnojquery(hellopreloader);
+      }, 1500);
+    };
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+.searchResult {
+  display: flex;
+  flex-wrap: wrap;
+}
+.itemSearchCount {
+  padding-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .listcards-itemcard:nth-child(2n -1) {
+    margin-right: 20px;
+  }
+  .container {
+    width: 610px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 1240px;
+  }
+  .listcards-itemcard {
+    margin-right: 20px;
+  }
+  .listcards-itemcard:nth-child(4n) {
+    margin-right: 0px;
+  }
+}

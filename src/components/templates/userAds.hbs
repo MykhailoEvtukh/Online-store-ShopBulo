@@ -1,0 +1,13 @@
+{{#each this}}
+<li class="ads_item" data-id="{{_id}}">
+    <div class="ads_item-wrapper">
+        <img class="ads_item-photo" src="{{images}}" alt="product photo">
+        <div class="ads-item-description-wrapper">
+            <p class="ads_item-title">{{title}}</p>
+            <p class="ads_item-description">{{description}}</p>
+            <p class="ads_item-price">Ціна: {{price}} грн.</p>
+            <button class="ads_item-btn" data-delad="delete-ads">Видалити</button>
+        </div>
+    </div>
+</li>
+{{/each}}
