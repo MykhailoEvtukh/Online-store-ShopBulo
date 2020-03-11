@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/monarchinit/shopbulo.git"
+    "url": "https://github.com/MykhailoEvtukh/Online-store-ShopBulo"
   },
   "keywords": [],
-  "author": "Yaroslav Lototskyi",
+  "author": "Evtukh Mykhailo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/monarchinit/shopbulo/issues"
+    "url": "https://github.com/MykhailoEvtukh/Online-store-ShopBulo"
   },
-  "homepage": "https://github.com/monarchinit/shopbulo",
+  "homepage": "https://github.com/MykhailoEvtukh/Online-store-ShopBulo",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
